@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap');
+
+body {
+    background-image: url('../image/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding-top: 4em;
+    font-size: 26pt;
+    font-family: 'Bilbo Swash Caps', cursive;
+}
+
+.desktop {
+    display: flex;
+  }
+  .empty-whisky {
+    
+    display: none;
+  }
+  .whisky {
+    display: none;
+  }
+  .inkpen {
+    display: none;
+  }
+  
+  
+
+.pages {
+    display: flex;
+    width: auto;
+    flex-basis : 65%;
+    margin:1em;
+}
+
+@media screen and (max-width: 800px) {
+    .desktop {
+        display: block;
+      }
+    .pages {
+      flex-direction: column-reverse;
+    }
+    .page {
+      margin: 0.5em;
+      width: calc(100% - 1em );
+      margin: 1px;
+    }
+  }
+  
+
+    @media screen and (min-width: 801px) {
+        .desktop {
+            display: block;
+          }
+        .page {
+            width: 100%;
+        }
+      }
+      
+      @media screen and (min-width: 1000px) {
+
+        .desktop{display: flex;
+            flex-direction: row;
+            
+        }
+        .empty-whisky {
+          display: flex ;
+          width: 220px;
+          height: 200px;
+        }
+    
+    .page {
+        flex : 1;
+        width: 10%;
+        display: flex-end;
+    }
+      
+      }
+
+
+         
+      @media screen and (min-width: 1100px) {
+        .empty-whisky {
+          display: none;
+        }
+        .whisky {
+          display: flex;
+          width: 220px;
+          height: 200px;
+        }
+      }
+      
+
+@media screen and (min-width: 1200px) {
+  .inkpen {
+    display: flex;
+    width: 220px;
+    height: 400px;
+    align-self: flex-end; 
+    margin-bottom: 50px; 
+  } 
+}
+
+.whisky,
+.empty-whisky,
+.inkpen,
+.page {
+  filter: drop-shadow(15px 15px 5px var(--shadow));
+}
+
+.pages {
+  display: flex; 
+  width: 100%;
+  margin: 0 1em;
+ }
+
+.page {
+  height: 65vh;
+  padding: 3vw;
+  background-blend-mode: multiply;
+} 
+
+.leftpage {
+  background: url("../image/paper.png"),
+    linear-gradient(
+      270deg,
+      rgba(157, 158, 137, 1) 0%,
+      rgba(233, 226, 187, 1) 5%,
+      rgba(255, 251, 203, 1) 18%
+    );
+  border-radius: 24px 40% 40% 24px/8px 8px 8px 8px;
+}
+
+.rightpage {
+  background: url("../image/paper.png"),
+    linear-gradient(
+      90deg,
+      rgba(157, 158, 137, 1) 0%,
+      rgba(233, 226, 187, 1) 5%,
+      rgba(255, 251, 203, 1) 18%
+    );
+  border-radius: 40% 24px 24px 40%/8px 8px 8px 8px;
+  overflow: auto;
+}
+
+#leftBookPage {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#leftBookPage label {
+  margin: 10px;
+}
+
+#leftPageButton {
+  width: 100px;
+  align-self: flex-start;
+  margin: 10px;
+}
+
+#S {
+  text-align: center;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  height: 40px;
+}
+
+hr {
+  margin: 2px;
+}
+
+#list {
+  display: flex;
+  margin: 20px 0;
+  height: calc(100% - 40px - 4px - 40px);
+}
+
+#list div {
+  flex: 1;
+  text-align: end;
+  align-self: flex-end;
+}
+
+#list p {
+  margin: 4px;
+}
+
